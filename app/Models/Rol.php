@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\SoftDeletes;
 
 /**
  * Class Rol
@@ -16,6 +17,8 @@ use Illuminate\Database\Eloquent\Model;
  */
 class Rol extends Model
 {
+
+    use SoftDeletes;
 
     protected $table = 'Rol';
     
