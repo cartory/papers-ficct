@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\RolController;
+use App\Http\Controllers\PersonaController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -20,4 +22,6 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::resource('roles', RolController::class);
+Route::resource('personas', PersonaController::class);
+
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
