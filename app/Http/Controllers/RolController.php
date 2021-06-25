@@ -84,8 +84,10 @@ class RolController extends Controller
      * @param  Rol $rol
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Rol $rol)
+    public function update(Request $request, $id)
     {
+        $rol = Rol::find($id);
+
         request()->validate(Rol::$rules);
 
         $rol->update($request->all());
